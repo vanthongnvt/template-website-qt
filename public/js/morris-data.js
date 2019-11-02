@@ -4,6 +4,7 @@ $(function() {
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',
+            sales: 400000,
             iphone: 2666,
             ipad: null,
             itouch: 2647
