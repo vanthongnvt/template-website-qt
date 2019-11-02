@@ -23,11 +23,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/orders', ordersRouter);
-app.use('/product', productRouter);
-app.use('/category', categoryRouter);
-app.get('/login',function(req,res){
+app.use('/nguoi-dung', usersRouter);
+app.use('/don-hang', ordersRouter);
+app.use('/san-pham', productRouter);
+app.use('/gian-hang', categoryRouter);
+app.get('/dang-nhap',function(req,res){
 	res.render('login');
 })
 

@@ -54,18 +54,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <% for (var i = 1; i <= 50; i++) {
+                                        <% products.forEach(function(product,i) {
                                             %>
                                             <tr class="<%if (i%2==1) { %>odd <%} else {%>even<%} %>gradeX">
-                                                <td>Trident</td>
-                                                <td><%= Math.random().toString(36).substring(7) %></td>
-                                                <td>Internet Explorer 4.0</td>
-                                                <td class="center">1,000,000 $</td>
-                                                <td>10</td>
-                                                <td>On</td>
+                                                <td><%=product.category%></td>
+                                                <td><%=product.id%></td>
+                                                <td><%=product.name%></td>
+                                                <td class="center"><%=product.cost%> VNĐ</td>
+                                                <td><%=product.quantity%></td>
+                                                <td><%=product.status%></td>
                                                 <td class="text-center">
                                                     <a href="#"><button type="button" class="btn btn-outline btn-primary btn-xs"><i class="fa fa-eye"></i> Xem</button></a>
-                                                    <a href="/product/edit">
+                                                    <a href="/san-pham/sua">
                                                         <button type="button" class="btn btn-outline btn-primary btn-xs"><i class="fa fa-edit"></i> Sửa</button>
                                                     </a>
                                                     <a href="#">
@@ -75,7 +75,7 @@
                                             </tr>
                                             <%
 
-                                        } %>
+                                        }) %>
                                     </tbody>
                                 </table>
                             </div>

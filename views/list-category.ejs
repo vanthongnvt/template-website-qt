@@ -54,15 +54,15 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <% for (var i = 1; i <= 50; i++) {
+                                                <% categories.forEach(function(category,i){
                                                 %>
                                                 <tr class="<%if (i%2==1) { %>odd <%} else {%>even<%} %>gradeX">
                                                     <td><%= i%></td>
-                                                    <td>Trident <%=i%></td>
-                                                    <td>On</td>
+                                                    <td><%=category.name%></td>
+                                                    <td><%=category.status%></td>
                                                     <td class="text-center">
                                                         <a href="#"><button type="button" class="btn btn-outline btn-primary btn-xs"><i class="fa fa-eye"></i> Xem</button></a>
-                                                        <a href="/category/edit">
+                                                        <a href="/gian-hang/sua">
                                                             <button type="button" class="btn btn-outline btn-primary btn-xs"><i class="fa fa-edit"></i> Sửa</button>
                                                         </a>
                                                         <a href="#">
@@ -72,7 +72,7 @@
                                                 </tr>
                                                 <%
 
-                                            } %>
+                                            })%>
                                             </tbody>
                                         </table>
                                     </div>

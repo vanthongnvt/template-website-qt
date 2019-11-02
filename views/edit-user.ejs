@@ -38,27 +38,27 @@
 										<form role="form">
 											<div class="form-group">
 												<label>Tên tài khoản</label>
-												<p class="form-control-static">@example</p>
+												<p class="form-control-static">@<%=user.username%></p>
 											</div>
 											<div class="form-group">
 												<label>Họ</label>
-												<input class="form-control" placeholder="Nhập họ" value="<%=null%>">
+												<input class="form-control" placeholder="Nhập họ" value="<%=user.firstname%>">
 											</div>
 											<div class="form-group">
 												<label>Tên</label>
-												<input class="form-control" placeholder="Nhập tên" value="<%=null%>">
+												<input class="form-control" placeholder="Nhập tên" value="<%=user.lastname%>">
 											</div>
 											<div class="form-group">
 												<label>Email</label>
-												<input class="form-control" placeholder="Nhập email" value="<%=null%>">
+												<input class="form-control" placeholder="Nhập email" value="<%=user.email%>">
 											</div>
 											<div class="form-group">
 												<label>Số điện thoại</label>
-												<input class="form-control" placeholder="Nhập số điện thoại" value="<%=null%>">
+												<input class="form-control" placeholder="Nhập số điện thoại" value="<%=user.phone%>">
 											</div>
 											<div class="form-group">
 												<label>Địa chỉ</label>
-												<input class="form-control" placeholder="Nhập địa chỉ" value="<%=null%>">
+												<input class="form-control" placeholder="Nhập địa chỉ" value="<%=user.address%>">
 											</div>
 											<div class="form-group">
 												<label>Hình ảnh đại diện</label>

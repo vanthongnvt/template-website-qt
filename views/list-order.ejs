@@ -50,19 +50,19 @@
                                                 <th>Địa chỉ</th>
                                                 <th>Tổng thanh toán</th>
                                                 <th>Tình trạng</th>
-                                                <th>Lựa chọn</th>
+                                                <th style="min-width: 150px">Lựa chọn</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <% for (var i = 1; i <= 50; i++) {
+                                            <% orders.forEach(function(order,i){
                                                 %>
                                                 <tr class="<%if (i%2==1) { %>odd <%} else {%>even<%} %>gradeX">
-                                                    <td><%= Math.random().toString(36).substring(7) %></td>
-                                                    <td>No Name</td>
-                                                    <td>00000000000000</td>
-                                                    <td class="center">...............................</td>
-                                                    <td class="center">1,000,000 $</td>
-                                                    <td>Delivered</td>
+                                                    <td><%= order.id %></td>
+                                                    <td><%=order.name%></td>
+                                                    <td><%=order.phone%></td>
+                                                    <td class="center"><%=order.address%></td>
+                                                    <td class="center"><%=order.total%> VNĐ</td>
+                                                    <td><%=order.status%></td>
                                                     <td class="text-center">
                                                         <a href="#"><button type="button" class="btn btn-outline btn-primary btn-xs"><i class="fa fa-eye"></i> Xem</button></a>
                                                         <a href="#">
@@ -75,7 +75,7 @@
                                                 </tr>
                                                 <%
 
-                                            } %>
+                                            }) %>
                                         </tbody>
                                     </table>
                                 </div>
